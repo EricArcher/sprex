@@ -1,0 +1,16 @@
+ACE                     Number of Unobserved Species
+bootstrap.assemblage    Bootstrap Assemblage of Species
+discovery.curve         Discovery Curve
+expand.freqs            Expand Frequency Matrix
+expected.num.species    Expected Number of Species
+f.stats                 Frequency Vector Statistics
+num.samples.required    Number of Samples Required
+osa.old.growth          Osa old growth
+osa.second.growth       Osa second growth
+plot.discovery.curve    Plot a Discovery Curve
+sample.to.species.freq
+                        Create Vector of Species Frequencies
+species.to.sample.freq
+                        Create Vector of Sample Frequencies
+sprex-package           Calculate species richness and extrapolation
+                        metrics
