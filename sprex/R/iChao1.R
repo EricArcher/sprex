@@ -4,8 +4,11 @@
 
 iChao1 <- function(f) {
   x <- Chao1(f)
+  if(length(f) < 4) {
+    x["s.est"] <- x["f0"] <- NA
+    return(x)
+  }
   n <- x["n"]
-  if(length(f) < 4) return(c(f0 = NA, s.obs = x["obs"], n = n))
   s.est <- x["s.obs"] + x["f0"]
   term.1 <- (n - 3) / (4 * n)
   if(f[4] == 0) f[4] <- 1
