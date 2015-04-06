@@ -4,17 +4,22 @@
 \alias{sample.to.species.freq}
 \title{Create Vector of Species Frequencies}
 \usage{
-sample.to.species.freq(x)
+sample.to.species.freq(x, min.f = NULL)
 }
 \arguments{
-\item{x}{a vector where \code{x[i]} is of the number of samples in the \code{i}-th species.}
+\item{x}{a vector where \code{x[i]} is of the number of samples in the
+\code{i}-th species.}
+
+\item{min.f}{minimum size of return vector. Return vector is zero-padded up
+  o this length if it would normally be shorter.}
 }
 \value{
-a vector(\code{f}) of species frequencies where \code{f[i]} is the number of species
-  represented by only \code{i} samples.
+a vector(\code{f}) of species frequencies where \code{f[i]} is the
+  number of species represented by only \code{i} samples.
 }
 \description{
-Create vector of species frequencies from vector of sample frequencies.
+Create vector of species frequencies from vector of sample
+  frequencies.
 }
 \examples{
 x <- sample(1:100, 30, rep = TRUE)

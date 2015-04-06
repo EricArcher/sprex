@@ -7,15 +7,18 @@
 expand.freqs(freq.mat)
 }
 \arguments{
-\item{freq.mat}{a two column matrix or data.frame where the first column is the number of samples, and
-  the second column is the number of species represented by with that many samples.}
+\item{freq.mat}{a two column matrix or data.frame where the first column is
+  the number of samples, and the second column is the number of species
+  represented by with that many samples.}
 }
 \value{
-a vector(\code{f}) of species frequencies where each element (\code{f[i]}) is the number of species
-  represented by only \code{i} samples.
+a vector(\code{f}) of species frequencies where each element
+  (\code{f[i]}) is the number of species represented by only \code{i}
+  samples.
 }
 \description{
-Expand a matrix or data.frame of species frequencies to full vector.
+Expand a matrix or data.frame of species frequencies to full
+  vector.
 }
 \examples{
 data(osa.old.growth)

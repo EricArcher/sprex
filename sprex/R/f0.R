@@ -3,27 +3,28 @@
 #' @title Number of Unobserved Species
 #' @description Calculate the number of unobserved species (f0).
 #' 
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
+#' @param f a vector of species frequencies where \code{f[i]} is the number of 
+#'   species represented by only \code{i} samples.
 #' @param N population size.
 #'  
-#' @return All functions return a vector containing the estimated number of species (\code{s.est}), 
-#'   unobserved species (\code{f0}), observed species (\code{s.obs}), and the total number 
-#'   of samples (\code{n}). \code{Swor1} also returns the standard deviation of \code{s.est} 
-#'   as \code{sd.s.est}.
+#' @return All functions return a vector containing the estimated number of 
+#'   species (\code{s.est}), unobserved species (\code{f0}), observed species 
+#'   (\code{s.obs}), and the total number of samples (\code{n}). \code{Swor1} 
+#'   also returns the standard deviation of \code{s.est} as \code{sd.s.est}.
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 
 #' @references 
-#'   \code{Chao1,ACE}: Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao, R.L. Chazdon,  
-#'   and J.T. Longino. 2012. Models and estimators linking individual-based and
-#'   sample-based rarefaction, extrapolation and comparison of assemblages. 
-#'   Journal of Plant Ecology 5(1):3-21. \cr\cr
-#'   \code{jack1,jack2}: Burnham, KP and WS Overton. 1978. Estimation of the size of a closed population when
-#'   capture probabilities vary among animals. Biometrika 65(3):625-633. \cr\cr
+#'   \code{Chao1,ACE}: Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 
+#'   C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and estimators 
+#'   linking individual-based and sample-based rarefaction, extrapolation and 
+#'   comparison of assemblages. Journal of Plant Ecology 5(1):3-21. \cr\cr
+#'   \code{jack1,jack2}: Burnham, KP and WS Overton. 1978. Estimation of the 
+#'   size of a closed population when capture probabilities vary among animals. 
+#'   Biometrika 65(3):625-633. \cr\cr
 #'   \code{Swor1}: Chao, A. and C.-W. Lin. 2012. Nonparametric lower bounds for 
-#'   species richness and shared species richness under sampling without replacement. 
-#'   Biometrics 68:912-921. \cr\cr
+#'   species richness and shared species richness under sampling without 
+#'   replacement. Biometrics 68:912-921. \cr\cr
 #'   \code{iChao1}: Chiu, C-H, Wang, Y-T, Walther, BA, and A Chao. 2014. 
 #'   An improved nonparametric lower bound of species richness via a 
 #'   modified Good-Turing frequency formula. Biometrics 70(3):671-682.

@@ -10,11 +10,13 @@
 \arguments{
 \item{x}{result of a call to \code{discovery.curve}.}
 
-\item{col}{color of confidence interval polygon and line denoting \code{s.est}.}
+\item{col}{color of confidence interval polygon and line denoting
+\code{s.est}.}
 
 \item{lwd}{line widths.}
 
-\item{xlab,ylab}{labels of x and y axes. Only used if \code{add} is \code{TRUE}.}
+\item{xlab,ylab}{labels of x and y axes. Only used if \code{add} is
+\code{TRUE}.}
 
 \item{add}{logical. If TRUE, polygon and lines are added to the current plot.}
 
@@ -33,10 +35,10 @@ plot(d)
 Eric Archer \email{eric.archer@noaa.gov}
 }
 \references{
-Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao, R.L. Chazdon,
-  and J.T. Longino. 2012. Models and estimators linking individual-based and
-  sample-based rarefaction, extrapolation and comparison of assemblages.
-  Journal of Plant Ecology 5(1):3-21.
+Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao,
+  R.L. Chazdon, and J.T. Longino. 2012. Models and estimators linking
+  individual-based and sample-based rarefaction, extrapolation and
+  comparison of assemblages. Journal of Plant Ecology 5(1):3-21.
 }
 \seealso{
 \code{\link{discovery.curve}}

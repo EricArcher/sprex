@@ -1,20 +1,23 @@
 #' @title Expected Number of Species
-#' @description Calculate the expected number of species for a given sample size.
+#' @description Calculate the expected number of species for a given 
+#'   sample size.
 #' 
 #' @param m number of samples.
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
-#' @param f0.func a function that computes the number of unobserved species (f0).
+#' @param f a vector of species frequencies where \code{f[i]} is the number 
+#'   of species represented by only \code{i} samples.
+#' @param f0.func a function that computes the number of unobserved 
+#'   species (f0).
 #' @param ... other arguments to \code{f0.func}.
 #' 
-#' @return a vector of the estimated number of species (\code{s.ind}) seen in \code{m} samples, 
-#'   and the standard deviation (\code{sd.s.ind}).
+#' @return a vector of the estimated number of species (\code{s.ind}) seen 
+#'   in \code{m} samples, and the standard deviation (\code{sd.s.ind}).
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 
-#' @references Eqns 4, 5, 9, and 10 in Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 
-#'   C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and estimators linking 
-#'   individual-based and sample-based rarefaction, extrapolation and comparison of assemblages. 
+#' @references Eqns 4, 5, 9, and 10 in Colwell, R.K., A. Chao, N.J. Gotelli, 
+#'   S.-Y. Lin, C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and 
+#'   estimators linking individual-based and sample-based rarefaction, 
+#'   extrapolation and comparison of assemblages. 
 #'   Journal of Plant Ecology 5(1):3-21.
 #'  
 #' @examples

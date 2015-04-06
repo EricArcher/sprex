@@ -9,14 +9,16 @@ num.samples.required(g, f, f0.func)
 \arguments{
 \item{g}{propotion of total number of species.}
 
-\item{f}{a vector of species frequencies where \code{f[i]} is the number of species
-represented by only \code{i} samples.}
+\item{f}{a vector of species frequencies where \code{f[i]} is the number of
+species represented by only \code{i} samples.}
 
-\item{f0.func}{a function that computes the number of unobserved species (f0).}
+\item{f0.func}{a function that computes the number of unobserved
+  species (f0).}
 }
 \value{
-a vector containing of the estimated number of samples (\code{m.g}) required to observe
-  \code{g} percent of the total number of species.
+a vector containing of the estimated number of samples
+  (\code{m.g}) required to observe \code{g} percent of the total number
+  of species.
 }
 \description{
 Calculate the number of samples to required to observe a
@@ -32,8 +34,8 @@ Eric Archer \email{eric.archer@noaa.gov}
 }
 \references{
 Eqn 11 in Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin,
-  C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and estimators linking
-  individual-based and sample-based rarefaction, extrapolation and comparison of assemblages.
-  Journal of Plant Ecology 5(1):3-21.
+  C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and estimators
+  linking individual-based and sample-based rarefaction, extrapolation and
+  comparison of assemblages. Journal of Plant Ecology 5(1):3-21.
 }
 

@@ -1,9 +1,10 @@
 #' @title Bootstrap Assemblage of Species
 #' @description Create bootstrap assemblage of species.
 #' 
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
-#' @param f0.func function calculating the unobserved number of species (\code{f0}).
+#' @param f a vector of species frequencies where \code{f[i]} is the number of 
+#'   species represented by only \code{i} samples.
+#' @param f0.func function calculating the unobserved number of 
+#'   species (\code{f0}).
 #' @param n.boot number of bootstrap replicates.
 #' @param ... other arguments to \code{f0.func}.
 #' 

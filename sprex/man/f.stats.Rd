@@ -7,15 +7,16 @@
 f.stats(f)
 }
 \arguments{
-\item{f}{a vector of species frequencies where \code{f[i]} is the number of species
-  represented by only \code{i} samples.}
+\item{f}{a vector of species frequencies where \code{f[i]} is the number
+  of species represented by only \code{i} samples.}
 }
 \value{
 a vector of the number of observed species (\code{s.obs}),
   and the total number of samples (\code{n}).
 }
 \description{
-Number of observed species and samples in species frequency vector.
+Number of observed species and samples in species frequency
+  vector.
 }
 \examples{
 data(osa.second.growth)

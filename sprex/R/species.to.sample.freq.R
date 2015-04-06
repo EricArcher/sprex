@@ -1,10 +1,12 @@
 #' @title Create Vector of Sample Frequencies
-#' @description Create vector of sample frequencies from vector of species frequencies.
+#' @description Create vector of sample frequencies from vector of 
+#'   species frequencies.
 #' 
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
+#' @param f a vector of species frequencies where \code{f[i]} is the 
+#'   number of species represented by only \code{i} samples.
 #' 
-#' @return a vector(\code{x}) where \code{x[i]} is of the number of samples in the \code{i}-th species.
+#' @return a vector(\code{x}) where \code{x[i]} is of the number of samples 
+#'   in the \code{i}-th species.
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 

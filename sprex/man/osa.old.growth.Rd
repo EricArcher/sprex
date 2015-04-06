@@ -12,8 +12,8 @@ Osa old growth
 }
 \references{
 Janzen DH (1973) Sweep samples of tropical foliage insects:
-  effects of seasons, vegetation types, elevation, time of day, and insularity.
-  Ecology 54:687-708.
+  effects of seasons, vegetation types, elevation, time of day,
+  and insularity. Ecology 54:687-708.
 }
 \keyword{datasets}
 

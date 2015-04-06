@@ -1,8 +1,9 @@
 #' @title Frequency Vector Statistics
-#' @description Number of observed species and samples in species frequency vector.
+#' @description Number of observed species and samples in species frequency 
+#'   vector.
 #' 
-#' @param f a vector of species frequencies where \code{f[i]} is the number of species
-#'   represented by only \code{i} samples.
+#' @param f a vector of species frequencies where \code{f[i]} is the number 
+#'   of species represented by only \code{i} samples.
 #' 
 #' @return a vector of the number of observed species (\code{s.obs}), 
 #'   and the total number of samples (\code{n}).

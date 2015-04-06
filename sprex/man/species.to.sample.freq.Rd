@@ -7,14 +7,16 @@
 species.to.sample.freq(f)
 }
 \arguments{
-\item{f}{a vector of species frequencies where \code{f[i]} is the number of species
-  represented by only \code{i} samples.}
+\item{f}{a vector of species frequencies where \code{f[i]} is the
+  number of species represented by only \code{i} samples.}
 }
 \value{
-a vector(\code{x}) where \code{x[i]} is of the number of samples in the \code{i}-th species.
+a vector(\code{x}) where \code{x[i]} is of the number of samples
+  in the \code{i}-th species.
 }
 \description{
-Create vector of sample frequencies from vector of species frequencies.
+Create vector of sample frequencies from vector of
+  species frequencies.
 }
 \examples{
 data(osa.old.growth)

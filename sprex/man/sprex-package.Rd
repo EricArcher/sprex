@@ -6,10 +6,11 @@
 \alias{sprex-package}
 \title{Calculate species richness and extrapolation metrics}
 \description{
-Calculate species richness and expected number of species primarily based on
-  algorithms in Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao, R.L. Chazdon,
-  and J.T. Longino. 2012. Models and estimators linking individual-based and
-  sample-based rarefaction, extrapolation and comparison of assemblages.
+Calculate species richness and expected number of species
+  primarily based on algorithms in Colwell, R.K., A. Chao, N.J. Gotelli,
+  S.-Y. Lin, C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and
+  estimators linking individual-based and sample-based rarefaction,
+  extrapolation and comparison of assemblages.
   Journal of Plant Ecology 5(1):3-21.
 }
 \details{
