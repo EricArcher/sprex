@@ -20,10 +20,11 @@
 #' @examples
 #' data(osa.old.growth)
 #' f <- expand.freqs(osa.old.growth)
-#' num.samples.required(0.6, f)
+#' num.samples.required(0.6, f = f, f0.func = Chao1)
 #' 
 #' @export
-num.samples.required <- function(g, f, f0.func = Chao1) {
+
+num.samples.required <- function(g, f, f0.func) {
   x <- f0.func(f)
   s.est <- unname(x["s.est"])
   s.obs <- unname(x["s.obs"])
@@ -35,7 +36,7 @@ num.samples.required <- function(g, f, f0.func = Chao1) {
     term.1 * log(term.2)
   } else if(g < (s.obs / s.est) & g >= 0) {
     m <- ceiling(g * s.est)
-    expected.num.species(m, f, f0.func = f0.func)["s.ind"]
+    expected.num.species(m = m, f = f, f0.func = f0.func)["s.ind"]
   } else NA
   c(m.g = unname(m.g), g = g, x)
 }

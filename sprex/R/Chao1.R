@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 Chao1 <- function(f) {
   x <- f.stats(f)
   s.obs <- unname(x["s.obs"])

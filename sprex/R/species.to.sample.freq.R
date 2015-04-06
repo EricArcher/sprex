@@ -18,6 +18,7 @@
 #' print(x)
 #' 
 #' @export
+
 species.to.sample.freq <- function(f) {
   unlist(lapply(1:length(f), function(i) rep(i, f[i])))
 }

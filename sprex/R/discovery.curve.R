@@ -32,11 +32,12 @@
 #' @examples
 #' data(osa.old.growth)
 #' f <- expand.freqs(osa.old.growth)
-#' d <- discovery.curve(f, max.x = 1200)
+#' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 #' plot(d)
 #' 
 #' @export
-discovery.curve <- function(f, max.x = sum(f * 1:length(f)), n.pts = 100, ci = 0.95, f0.func = Chao1, ...) {
+
+discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), n.pts = 100, ci = 0.95, ...) {
   n <- sum(f * 1:length(f))
   n.seq <- ceiling(seq(0, ceiling(max.x), length.out = n.pts))
   n.seq <- sort(unique(c(n, n.seq)))

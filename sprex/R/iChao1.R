@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 iChao1 <- function(f) {
   x <- Chao1(f)
   n <- x["n"]

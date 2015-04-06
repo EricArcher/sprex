@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 Swor1 <- function(f, N) {
   if(length(f) == 1) f <- c(f, 0)
   x <- f.stats(f)

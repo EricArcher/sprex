@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 ACE <- function(f) {
   x <- f.stats(f)
   if(length(f) < 10) f <- c(f, rep(0, 10 - length(f)))

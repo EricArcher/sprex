@@ -1,6 +1,7 @@
 #' @rdname f0
 #' 
 #' @export
+
 jack1 <- function(f) {
   x <- f.stats(f)
   s.est <- unname(x["s.obs"] + f[1])

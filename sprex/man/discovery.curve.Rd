@@ -4,12 +4,16 @@
 \alias{discovery.curve}
 \title{Discovery Curve}
 \usage{
-discovery.curve(f, max.x = sum(f * 1:length(f)), n.pts = 100, ci = 0.95,
-  f0.func = Chao1, ...)
+discovery.curve(f, f0.func, max.x = sum(f * 1:length(f)), n.pts = 100,
+  ci = 0.95, ...)
 }
 \arguments{
 \item{f}{a vector of species frequencies where \code{f[i]} is the number of species
 represented by only \code{i} samples.}
+
+\item{f0.func}{function to use to calculate f0. Can be \code{\link{Chao1}},
+\code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}}, \code{\link{iChao1}},
+or \code{\link{Swor1}}.}
 
 \item{max.x}{the maximum number of samples to calculate the curve for. Defaults to the
 sample size of \code{f}.}
@@ -17,10 +21,6 @@ sample size of \code{f}.}
 \item{n.pts}{number of points between 0 and \code{max.x} to estimate.}
 
 \item{ci}{size of the confidence interval (0.5:1).}
-
-\item{f0.func}{function to use to calculate f0. Can be \code{\link{Chao1}},
-\code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}}, \code{\link{iChao1}},
-or \code{\link{Swor1}}.}
 
 \item{...}{other arguments to \code{f0.func}.}
 }
@@ -39,7 +39,7 @@ Calculate the components of a species discovery curve.
 \examples{
 data(osa.old.growth)
 f <- expand.freqs(osa.old.growth)
-d <- discovery.curve(f, max.x = 1200)
+d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 plot(d)
 }
 \author{

@@ -20,11 +20,12 @@
 #' @examples
 #' data(osa.old.growth)
 #' f <- expand.freqs(osa.old.growth)
-#' d <- discovery.curve(f, max.x = 1200)
+#' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 #' plot(d)
 #' 
 #' @export plot.discovery.curve
 #' @export
+
 plot.discovery.curve <- function(x, col = "darksalmon", lwd = 2, xlab = "# Samples", ylab = "n", add = FALSE, ...) {
   s.obs <- x$f.stats["s.obs"]
   s.est <- x$f.stats["s.obs"] + x$f.stats["f0"]

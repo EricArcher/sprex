@@ -17,7 +17,8 @@
 #'   diversity studies. Ecological Monographs 84(1):45-67.
 #'   
 #' @export
-bootstrap.assemblage <- function(f, f0.func = Chao1, n.boot = 500, ...) {
+
+bootstrap.assemblage <- function(f, f0.func, n.boot = 500, ...) {
   if(length(f) == 1) f <- c(f, 0)
   f0.est <- f0.func(f, ...)
   n <- unname(f0.est["n"])

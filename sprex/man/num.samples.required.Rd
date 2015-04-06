@@ -4,7 +4,7 @@
 \alias{num.samples.required}
 \title{Number of Samples Required}
 \usage{
-num.samples.required(g, f, f0.func = Chao1)
+num.samples.required(g, f, f0.func)
 }
 \arguments{
 \item{g}{propotion of total number of species.}
@@ -25,7 +25,7 @@ Calculate the number of samples to required to observe a
 \examples{
 data(osa.old.growth)
 f <- expand.freqs(osa.old.growth)
-num.samples.required(0.6, f)
+num.samples.required(0.6, f = f, f0.func = Chao1)
 }
 \author{
 Eric Archer \email{eric.archer@noaa.gov}

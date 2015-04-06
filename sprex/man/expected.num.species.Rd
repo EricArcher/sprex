@@ -4,7 +4,7 @@
 \alias{expected.num.species}
 \title{Expected Number of Species}
 \usage{
-expected.num.species(m, f, f0.func = Chao1, ...)
+expected.num.species(m, f, f0.func, ...)
 }
 \arguments{
 \item{m}{number of samples.}
@@ -26,7 +26,7 @@ Calculate the expected number of species for a given sample size.
 \examples{
 data(osa.old.growth)
 f <- expand.freqs(osa.old.growth)
-expected.num.species(60, f)
+expected.num.species(60, f = f, f0.func = Chao1)
 }
 \author{
 Eric Archer \email{eric.archer@noaa.gov}

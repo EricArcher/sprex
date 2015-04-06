@@ -20,10 +20,11 @@
 #' @examples
 #' data(osa.old.growth)
 #' f <- expand.freqs(osa.old.growth)
-#' expected.num.species(60, f)
+#' expected.num.species(60, f = f, f0.func = Chao1)
 #' 
 #' @export
-expected.num.species <- function(m, f, f0.func = Chao1, ...) {
+
+expected.num.species <- function(m, f, f0.func, ...) {
   x <- f0.func(f, ...)
   s.est <- unname(x["s.est"])
   s.obs <- unname(x["s.obs"])
