@@ -21,7 +21,7 @@
 #' print(f)
 #' 
 #' @export
-
+#' 
 sample.to.species.freq <- function(x, min.f = NULL) {
   x.df <- as.data.frame(table(x), stringsAsFactors = FALSE)
   x.df[, 1] <- as.numeric(as.character(x.df[, 1]))

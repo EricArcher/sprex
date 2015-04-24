@@ -27,7 +27,7 @@
 #' 
 #' @export plot.discovery.curve
 #' @export
-
+#' 
 plot.discovery.curve <- function(x, col = "darksalmon", lwd = 2, 
                                  xlab = "# Samples", ylab = "n", 
                                  add = FALSE, ...) {

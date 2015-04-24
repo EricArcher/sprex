@@ -40,7 +40,7 @@
 #' plot(d)
 #' 
 #' @export
-
+#' 
 discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), 
                             n.pts = 100, ci = 0.95, ...) {
   n <- sum(f * 1:length(f))

@@ -1,4 +1,5 @@
 #' @name f0
+#' @aliases f0
 #' 
 #' @title Number of Unobserved Species
 #' @description Calculate the number of unobserved species (f0).
