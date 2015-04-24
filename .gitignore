@@ -3,4 +3,4 @@
 .RData
 sprex.Rproj
 sprex.Rcheck/
-sprex.Rcheck
+*sprex.Rcheck
