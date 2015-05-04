@@ -71,8 +71,8 @@ expected.num.species <- function(m, f, f0.func, ...) {
       f.m1 <- f.p1 <- f
       f.m1[i] <- max(c(0, f.m1[i] - 1))
       f.p1[i] <- f.p1[i] + 1
-      f0.m1 <- f0.func(f.m1)
-      f0.p1 <- f0.func(f.p1)
+      f0.m1 <- f0.func(f.m1, ...)
+      f0.p1 <- f0.func(f.p1, ...)
       dS.m1 = s.ind.n.m(f0.m1["f0"], f.m1[1], n, m.star, f0.m1["s.obs"])
       dS.p1 = s.ind.n.m(f0.p1["f0"], f.p1[1], n, m.star, f0.p1["s.obs"])
       (dS.p1 - dS.m1) / 2

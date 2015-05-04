@@ -4,7 +4,7 @@
 \alias{num.samples.required}
 \title{Number of Samples Required}
 \usage{
-num.samples.required(g, f, f0.func)
+num.samples.required(g, f, f0.func, ...)
 }
 \arguments{
 \item{g}{propotion of total number of species.}
@@ -13,7 +13,9 @@ num.samples.required(g, f, f0.func)
 species represented by only \code{i} samples.}
 
 \item{f0.func}{a function that computes the number of unobserved
-  species (f0).}
+species (f0).}
+
+\item{...}{other arguments to \code{f0.func}.}
 }
 \value{
 a vector containing of the estimated number of samples

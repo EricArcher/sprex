@@ -7,6 +7,7 @@
 #'   species represented by only \code{i} samples.
 #' @param f0.func a function that computes the number of unobserved 
 #'   species (f0).
+#' @param ... other arguments to \code{f0.func}.
 #' 
 #' @return a vector containing of the estimated number of samples 
 #'   (\code{m.g}) required to observe \code{g} percent of the total number 
@@ -26,8 +27,8 @@
 #' 
 #' @export
 
-num.samples.required <- function(g, f, f0.func) {
-  x <- f0.func(f)
+num.samples.required <- function(g, f, f0.func, ...) {
+  x <- f0.func(f, ...)
   s.est <- unname(x["s.est"])
   s.obs <- unname(x["s.obs"])
   
@@ -39,7 +40,7 @@ num.samples.required <- function(g, f, f0.func) {
     term.1 * log(term.2)
   } else if(g < (s.obs / s.est) & g >= 0) {
     m <- ceiling(g * s.est)
-    expected.num.species(m = m, f = f, f0.func = f0.func)["s.ind"]
+    expected.num.species(m = m, f = f, f0.func = f0.func, ...)["s.ind"]
   } else NA
   c(m.g = unname(m.g), g = g, x)
 }
