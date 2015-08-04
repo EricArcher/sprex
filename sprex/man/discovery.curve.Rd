@@ -11,9 +11,7 @@ discovery.curve(f, f0.func, max.x = sum(f * 1:length(f)), n.pts = 100,
 \item{f}{a vector of species frequencies where \code{f[i]} is the number of
 species represented by only \code{i} samples.}
 
-\item{f0.func}{function to use to calculate f0. Can be \code{\link{Chao1}},
-\code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}},
-\code{\link{iChao1}}, or \code{\link{Swor1}}.}
+\item{f0.func}{function to use to calculate \code{\link{f0}}.}
 
 \item{max.x}{the maximum number of samples to calculate the curve for.
 Defaults to the sample size of \code{f}.}

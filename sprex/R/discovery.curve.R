@@ -7,9 +7,7 @@
 #'   Defaults to the sample size of \code{f}.
 #' @param n.pts number of points between 0 and \code{max.x} to estimate.
 #' @param ci size of the confidence interval (0.5:1).
-#' @param f0.func function to use to calculate f0. Can be \code{\link{Chao1}},
-#'   \code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}}, 
-#'   \code{\link{iChao1}}, or \code{\link{Swor1}}.
+#' @param f0.func function to use to calculate \code{\link{f0}}.
 #' @param ... other arguments to \code{f0.func}.
 #' 
 #' @return a list with:
