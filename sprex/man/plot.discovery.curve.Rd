@@ -15,8 +15,7 @@
 
 \item{lwd}{line widths.}
 
-\item{xlab,ylab}{labels of x and y axes. Only used if \code{add} is
-\code{TRUE}.}
+\item{xlab,ylab}{labels of x and y axes. Only used if \code{add = FALSE}.}
 
 \item{add}{logical. If TRUE, polygon and lines are added to the current plot.}
 

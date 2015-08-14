@@ -4,6 +4,7 @@
 #'   If <= 1, is taken to be in range of \code{0:1}, otherwise is taken to be in \code{0:100}.
 #' @param num.reps number of random re-orderings of samples to fit curve to.
 #' 
+#' @importFrom stats coef nls nls.control
 #' @export
 #' 
 clench <- function(f, n.pct = 100, num.reps = 100) {

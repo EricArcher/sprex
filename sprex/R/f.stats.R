@@ -16,7 +16,7 @@
 #' f.stats(f)
 #' 
 #' @export
-
+#' 
 f.stats <- function(f) {
   s.obs <- sum(f)
   n <- sum(1:length(f) * f)

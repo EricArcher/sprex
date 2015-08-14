@@ -17,6 +17,7 @@
 #'   Hill numbers: a framework for sampling and estimation in species 
 #'   diversity studies. Ecological Monographs 84(1):45-67.
 #'   
+#' @importFrom stats rmultinom   
 #' @export
 
 bootstrap.assemblage <- function(f, f0.func, n.boot = 500, ...) {
