@@ -5,8 +5,7 @@
 #' @param col color of confidence interval polygon and line denoting 
 #'   \code{s.est}.
 #' @param lwd line widths.
-#' @param xlab,ylab labels of x and y axes. Only used if \code{add} is 
-#'   \code{TRUE}.
+#' @param xlab,ylab labels of x and y axes. Only used if \code{add = FALSE}.
 #' @param add logical. If TRUE, polygon and lines are added to the current plot.
 #' @param ... other arguments passed to plot (ignored).
 #' 
@@ -25,6 +24,7 @@
 #' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 #' plot(d)
 #' 
+#' @importFrom graphics plot.new plot.window axis mtext polygon lines points
 #' @export plot.discovery.curve
 #' @export
 #' 

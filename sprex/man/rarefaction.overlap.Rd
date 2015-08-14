@@ -4,21 +4,24 @@
 \alias{rarefaction.overlap}
 \title{Rarefaction Overlap}
 \usage{
-rarefaction.overlap(x, y, f0.func, ...)
+rarefaction.overlap(x, y, f0.func, n.rare = NULL, ...)
 }
 \arguments{
-\item{x,y}{two vectors of species frequencies where \code{f[i]} is the
+\item{x,y}{two vectors of species frequencies where the \code{i-th} element is the
 number of species represented by only \code{i} samples.}
 
 \item{f0.func}{function to use to calculate f0. Can be \code{\link{Chao1}},
 \code{\link{ACE}}, \code{\link{jack1}}, \code{\link{jack2}},
 \code{\link{iChao1}}, or \code{\link{Swor1}}.}
 
+\item{n.rare}{sample size to rarefy both populations to. Must be <= the minimum
+sample size. If \code{NULL}, the minimum sample size is used.}
+
 \item{...}{other arguments to \code{f0.func}.}
 }
 \value{
-a vector with the percent of overlap between the two distributions
-  amd the sample size and species estimates for the \code{x} and
+a vector with the percent of overlap between the two distributions,
+  the sample size, and species estimates for the \code{x} and
   \code{y} vectors.
 }
 \description{

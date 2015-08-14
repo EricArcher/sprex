@@ -37,6 +37,7 @@
 #' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
 #' plot(d)
 #' 
+#' @importFrom stats qnorm
 #' @export
 #' 
 discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), 
@@ -53,6 +54,7 @@ discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)),
     cbind(s.ind[, "sd.s.ind"], -s.ind[, "sd.s.ind"])
   ci.poly <- cbind(x = c(n.seq, rev(n.seq)), 
                    y = c(s.ind.ci[, 1], rev(s.ind.ci[, 2])))
+  ci.poly[, "y"] <- ifelse(ci.poly[, "y"] < 1, 1, ci.poly[, "y"])
   i <- which(s.ind[, "m"] <= f.stats["n"])
   rarefact.line <- cbind(x = s.ind[i, "m"], y = s.ind[i, "s.ind"])
   extrap.line <- cbind(x = s.ind[-i, "m"], y = s.ind[-i, "s.ind"])

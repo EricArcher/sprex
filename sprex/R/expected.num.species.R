@@ -1,3 +1,4 @@
+#' @name expected.num.species
 #' @title Expected Number of Species
 #' @description Calculate the expected number of species for a given 
 #'   sample size.
@@ -25,8 +26,21 @@
 #' f <- expand.freqs(osa.old.growth)
 #' expected.num.species(60, f = f, f0.func = Chao1)
 #' 
-#' @export
+NULL
 
+#' @export
+#' 
+.s.ind.n.m <- function(f0, f1, n, m.star, s.obs) {
+  if(f0 == 0) return(s.obs)
+  # calculate Sind(n + m*) Eqn 9
+  term.1 <- f1 / (n * f0)
+  term.2 <- (1 - term.1) ^ m.star
+  s.obs + (f0 * (1 - term.2))
+}
+
+#' @rdname expected.num.species
+#' @export
+#' 
 expected.num.species <- function(m, f, f0.func, ...) {
   x <- f0.func(f, ...)
   s.est <- unname(x["s.est"])
@@ -56,14 +70,7 @@ expected.num.species <- function(m, f, f0.func, ...) {
     c(s.ind = s.obs, sd.s.ind = 0) 
   } else {
     m.star <- m - n
-    s.ind.n.m <- function(f0, f1, n, m.star, s.obs) {
-      if(f0 == 0) return(s.obs)
-      # calculate Sind(n + m*) Eqn 9
-      term.1 <- f1 / (n * f0)
-      term.2 <- (1 - term.1) ^ m.star
-      s.obs + (f0 * (1 - term.2))
-    }
-    s.ind <- s.ind.n.m(f0, f[1], n, m.star, s.obs)
+    s.ind <- .s.ind.n.m(f0, f[1], n, m.star, s.obs)
     
     # variance estimation using partial derivatives from 
     #   Colwell et al 2012 Eqn 10 (modified from code by Alex Curtis)
@@ -73,8 +80,8 @@ expected.num.species <- function(m, f, f0.func, ...) {
       f.p1[i] <- f.p1[i] + 1
       f0.m1 <- f0.func(f.m1, ...)
       f0.p1 <- f0.func(f.p1, ...)
-      dS.m1 = s.ind.n.m(f0.m1["f0"], f.m1[1], n, m.star, f0.m1["s.obs"])
-      dS.p1 = s.ind.n.m(f0.p1["f0"], f.p1[1], n, m.star, f0.p1["s.obs"])
+      dS.m1 = .s.ind.n.m(f0.m1["f0"], f.m1[1], n, m.star, f0.m1["s.obs"])
+      dS.p1 = .s.ind.n.m(f0.p1["f0"], f.p1[1], n, m.star, f0.p1["s.obs"])
       (dS.p1 - dS.m1) / 2
     }
     

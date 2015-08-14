@@ -4,7 +4,8 @@ Title: Calculate Species Richness and Extrapolation Metrics
 Description: Calculate species richness functions for rarefaction and
     extrapolation.
 Version: 1.3
-Date: 2015-08-04
+Date: 2015-08-13
 Author: Eric Archer
 Maintainer: Eric Archer <eric.archer@noaa.gov>
+Imports: graphics, stats, swfscMisc
 License: GNU General Public License

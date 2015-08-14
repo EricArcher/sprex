@@ -18,7 +18,7 @@
 #' f
 #' 
 #' @export
-
+#' 
 expand.freqs <- function(freq.mat) {
   i.vec <- setdiff(1:max(freq.mat[, 1]), freq.mat[, 1])
   if(length(i.vec) > 0) {
