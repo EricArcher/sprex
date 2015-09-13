@@ -17,7 +17,7 @@ Chao1(f)
 
 Swor1(f, N)
 
-clench(f, n.pct = 100, num.reps = 100)
+clench(f, pct.range = c(0.1, 0.9), num.reps = 100)
 
 iChao1(f)
 
@@ -31,8 +31,8 @@ species represented by only \code{i} samples.}
 
 \item{N}{population size.}
 
-\item{n.pct}{percent of total number of samples to resample up to in curve fitting.
-If <= 1, is taken to be in range of \code{0:1}, otherwise is taken to be in \code{0:100}.}
+\item{pct.range}{two-element numeric vector giving minimum and maximum
+percent of samples to resample in curve fitting. Must be in range of \code{0:1}.}
 
 \item{num.reps}{number of random re-orderings of samples to fit curve to.}
 }

@@ -1,5 +1,5 @@
 rm(list = ls())
-source("richness.funcs.r")
+library(sprex)
 load("colwell.2012.spp.freq.rdata")
 
 f <- expand.f.vec(beetle.old)

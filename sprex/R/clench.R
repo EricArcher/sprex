@@ -1,18 +1,26 @@
 #' @rdname f0
 #' 
-#' @param n.pct percent of total number of samples to resample up to in curve fitting. 
-#'   If <= 1, is taken to be in range of \code{0:1}, otherwise is taken to be in \code{0:100}.
+#' @param pct.range two-element numeric vector giving minimum and maximum 
+#'   percent of samples to resample in curve fitting. Must be in range of \code{0:1}.
 #' @param num.reps number of random re-orderings of samples to fit curve to.
 #' 
 #' @importFrom stats coef nls nls.control
+#' @importFrom swfscMisc isBetween
 #' @export
 #' 
-clench <- function(f, n.pct = 100, num.reps = 100) {
-  # create matrix of random samples of increasing sizes for multiple replicates
-  if(n.pct > 1 & n.pct <= 100) n.pct <- n.pct / 100
-  if(n.pct > 100) stop("'n.pct' must be in 0:1 or 0:100")
+clench <- function(f, pct.range = c(0.1, 0.9), num.reps = 100) {
+  if(!all(isBetween(pct.range, 0, 1))) stop("'pct.range' must be in 0:1")
+  pct.range <- sort(pct.range)
+  # convert f to sample frequency distribution
   sample.freq <- species.to.sample.freq(f)
-  num.samples <- 1:ceiling(sum(sample.freq) * n.pct)
+  # get minimum and maximum number of samples
+  n <- sum(sample.freq)
+  min.n <- ceiling(n * min(pct.range))
+  max.n <- ceiling(n * max(pct.range))
+  min.n <- max(1, min.n)
+  max.n <- min(max.n, n)
+  # create data.frame of random samples of increasing sizes for multiple replicates
+  num.samples <- min.n:max.n
   sample.vec <- rep(1:length(sample.freq), sample.freq)
   num.species <- do.call(rbind, lapply(1:num.reps, function(i) {
     x <- sample(sample.vec)
@@ -28,6 +36,7 @@ clench <- function(f, n.pct = 100, num.reps = 100) {
   )
   nls.coefs <- coef(clench.nls)
   
+  # return estimates
   s.est <- unname(floor(nls.coefs["a"] / nls.coefs["b"]))
   s.obs <- length(unique(sample.vec))
   f0 <- max(s.obs, s.est) - s.obs
