@@ -40,7 +40,7 @@
 #' jack2.est <- jack2(f)
 #' swor1.est <- Swor1(f, 20000)
 #' ichao1.est <- iChao1(f)
-#' clench.est <- clench(f)
+#' clench.est <- Clench(f)
 #' 
 #' f0.est <- cbind(
 #'   ACE = ace.est["f0"],

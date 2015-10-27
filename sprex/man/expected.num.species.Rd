@@ -18,7 +18,8 @@ species (f0).}
 \item{...}{other arguments to \code{f0.func}.}
 }
 \value{
-a vector of the estimated number of species (\code{s.ind}) seen
+a vector or matrix (depending on whether \code{m} is a scalar or vector,
+  respectively) of the estimated number of species (\code{s.ind}) seen
   in \code{m} samples, and the standard deviation (\code{sd.s.ind}).
 }
 \description{
@@ -29,6 +30,8 @@ Calculate the expected number of species for a given
 data(osa.old.growth)
 f <- expand.freqs(osa.old.growth)
 expected.num.species(60, f = f, f0.func = Chao1)
+
+expected.num.species(c(60, 70, 75), f = f, f0.func = Chao1)
 }
 \author{
 Eric Archer \email{eric.archer@noaa.gov}
