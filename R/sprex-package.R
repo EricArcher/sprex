@@ -15,19 +15,16 @@ NULL
 
 #' @docType data
 #' @name osa.old.growth
-#' @title Osa old growth
+#' @aliases osa.second.growth
+#' @title Osa beetle species counts
 #' @usage data(osa.old.growth)
+#' data(osa.second.growth)
+#' @description Matrices of the number of beetle species (\code{fi}) occuring 
+#'   \code{i} times in a survey.
 #' @references Janzen DH (1973) Sweep samples of tropical foliage insects: 
 #'   effects of seasons, vegetation types, elevation, time of day, 
-#'   and insularity. Ecology 54:687-708.
-#' @keywords datasets
-NULL
-
-#' @docType data
-#' @name osa.second.growth
-#' @title Osa second growth
-#' @usage data(osa.second.growth)
-#' @references Janzen DH (1973) Sweep samples of tropical foliage insects: 
+#'   and insularity. Ecology 54:687-708.\cr
+#'   Janzen DH (1973) Sweep samples of tropical foliage insects: 
 #'   description of study sites, with data on species abundances and size 
 #'   distributions. Ecology 54:659-86.
 #' @keywords datasets
