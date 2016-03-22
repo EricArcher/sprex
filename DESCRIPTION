@@ -1,0 +1,16 @@
+Package: sprex
+Type: Package
+Title: Calculate Species Richness and Extrapolation Metrics
+Description: Calculate species richness functions for rarefaction and
+    extrapolation.
+Version: 1.5
+License: GNU General Public License
+Authors@R: c(
+  EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
+BugReports: https://github.com/EricArcher/sprex/issues
+Imports:
+    graphics,
+    stats,
+    swfscMisc
+License: GNU General Public License
+RoxygenNote: 5.0.1
