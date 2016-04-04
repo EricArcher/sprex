@@ -36,7 +36,7 @@ num.samples.required(0.6, f = f, f0.func = Chao1)
 Eric Archer \email{eric.archer@noaa.gov}
 }
 \references{
-Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotell. 2009. 
+Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotelli. 2009. 
   Sufficient sampling for asymptotic minimum species richness estimators. 
   Ecology 90(4):1125-1133. \cr
   Eqn 11 in Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 

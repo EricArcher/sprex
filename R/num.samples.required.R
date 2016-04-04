@@ -15,7 +15,7 @@
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 
-#' @references Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotell. 2009. 
+#' @references Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotelli. 2009. 
 #'   Sufficient sampling for asymptotic minimum species richness estimators. 
 #'   Ecology 90(4):1125-1133. \cr
 #'   Eqn 11 in Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 
@@ -47,7 +47,7 @@ num.samples.required <- function(g, f, f0.func, ...) {
       term.1 * log(term.2)
     } else {
       warning("since f2 == 0, number of samples based on optimizaton of Colwell et al 2012 Eqn. 9")
-      optim(
+      result <- optim(
         par = c(m.star = 0),
         fn = function(m.star, s.g, f0, f1, n, s.obs) {
           s.ind <- .s.ind.n.m(f0, f1, n, m.star, s.obs)
@@ -55,7 +55,14 @@ num.samples.required <- function(g, f, f0.func, ...) {
         }, 
         method = "L-BFGS-B", lower = 0,
         s.g = g * s.est, f0 = x["f0"], f1 = f[1], n = x["n"], s.obs = x["s.obs"]
-      )$par
+      )
+      if(result$convergence != 0) {
+        msg <- paste("equation optimization did not converge. convergence code",
+                     result$convergence,
+                     "returned. see ?optim for more information. NA returned.")
+        warning(paste)
+        NA
+      } else result$par
     }
   } else 0
   c(m.g = unname(m.g), g = g, x)

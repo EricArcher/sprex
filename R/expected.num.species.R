@@ -35,8 +35,9 @@ NULL
 .s.ind.n.m <- function(f0, f1, n, m.star, s.obs) {
   if(f0 == 0) return(s.obs)
   # calculate Sind(n + m*) Eqn 9
-  term.1 <- f1 / (n * f0)
-  term.2 <- (1 - term.1) ^ m.star
+  # term.1 <- f1 / (n * f0)
+  # term.2 <- (1 - term.1) ^ m.star
+  term.2 <- exp(-(m.star / n) * (f1 / f0))
   s.obs + (f0 * (1 - term.2))
 }
 
