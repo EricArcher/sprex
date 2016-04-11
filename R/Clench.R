@@ -3,7 +3,7 @@
 #' @param pct.n percent of samples to use in bootstrap draws. Must be in range of \code{0:1}.
 #' @param num.reps number of random re-orderings of samples to fit curve to.
 #' 
-#' @importFrom stats coef nls nls.control
+#' @importFrom stats coef nls nls.control median sd
 #' @importFrom swfscMisc isBetween
 #' @export
 #' 
