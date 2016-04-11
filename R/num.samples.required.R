@@ -48,19 +48,18 @@ num.samples.required <- function(g, f, f0.func, ...) {
     } else {
       warning("since f2 == 0, number of samples based on optimizaton of Colwell et al 2012 Eqn. 9")
       result <- optim(
-        par = c(m.star = 0),
+        par = c(m.star = 1),
         fn = function(m.star, s.g, f0, f1, n, s.obs) {
           s.ind <- .s.ind.n.m(f0, f1, n, m.star, s.obs)
           unname(abs(s.ind - s.g))
-        }, 
+        },
         method = "L-BFGS-B", lower = 0,
         s.g = g * s.est, f0 = x["f0"], f1 = f[1], n = x["n"], s.obs = x["s.obs"]
       )
       if(result$convergence != 0) {
-        msg <- paste("equation optimization did not converge. convergence code",
-                     result$convergence,
-                     "returned. see ?optim for more information. NA returned.")
-        warning(paste)
+        msg <- paste("equation 9 optimization did not converge, with code ",
+                     result$convergence, ": ", result$message)
+        warning(msg)
         NA
       } else result$par
     }
