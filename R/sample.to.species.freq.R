@@ -5,7 +5,7 @@
 #' @param x a vector where \code{x[i]} is of the number of samples in the 
 #'   \code{i}-th species.
 #' @param min.f minimum size of return vector. Return vector is zero-padded up 
-#'   o this length if it would normally be shorter.
+#'   to this length if it would normally be shorter.
 #' 
 #' @return a vector(\code{f}) of species frequencies where \code{f[i]} is the 
 #'   number of species represented by only \code{i} samples.
@@ -15,7 +15,7 @@
 #' @seealso species.to.sample.freq
 #' 
 #' @examples
-#' x <- sample(1:100, 30, rep = TRUE)
+#' x <- sample(1:20, 20, rep = TRUE)
 #' f <- sample.to.species.freq(x)
 #' print(x)
 #' print(f)
