@@ -11,7 +11,7 @@ sample.to.species.freq(x, min.f = NULL)
 \code{i}-th species.}
 
 \item{min.f}{minimum size of return vector. Return vector is zero-padded up 
-o this length if it would normally be shorter.}
+to this length if it would normally be shorter.}
 }
 \value{
 a vector(\code{f}) of species frequencies where \code{f[i]} is the 
@@ -22,7 +22,7 @@ Create vector of species frequencies from vector of sample
   frequencies.
 }
 \examples{
-x <- sample(1:100, 30, rep = TRUE)
+x <- sample(1:20, 20, rep = TRUE)
 f <- sample.to.species.freq(x)
 print(x)
 print(f)
