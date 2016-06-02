@@ -13,22 +13,23 @@
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 
-#' @references 
-#'   \code{Chao1,ACE}: Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 
+#' @references \describe{
+#'   \item{\code{Chao1, ACE}}{Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, 
 #'   C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and estimators 
 #'   linking individual-based and sample-based rarefaction, extrapolation and 
-#'   comparison of assemblages. Journal of Plant Ecology 5(1):3-21. \cr\cr
-#'   \code{jack1,jack2}: Burnham, KP and WS Overton. 1978. Estimation of the 
+#'   comparison of assemblages. Journal of Plant Ecology 5(1):3-21.}
+#'   \item{\code{jack1, jack2}}{Burnham, KP and WS Overton. 1978. Estimation of the 
 #'   size of a closed population when capture probabilities vary among animals. 
-#'   Biometrika 65(3):625-633. \cr\cr
-#'   \code{Swor1}: Chao, A. and C.-W. Lin. 2012. Nonparametric lower bounds for 
+#'   Biometrika 65(3):625-633.}
+#'   \item{\code{Swor1}}{Chao, A. and C.-W. Lin. 2012. Nonparametric lower bounds for 
 #'   species richness and shared species richness under sampling without 
-#'   replacement. Biometrics 68:912-921. \cr\cr
-#'   \code{iChao1}: Chiu, C-H, Wang, Y-T, Walther, BA, and A Chao. 2014. 
+#'   replacement. Biometrics 68:912-921.}
+#'   \item{\code{iChao1}}{Chiu, C-H, Wang, Y-T, Walther, BA, and A Chao. 2014. 
 #'   An impro.ved nonparametric lower bound of species richness via a 
-#'   modified Good-Turing frequency formula. Biometrics 70(3):671-682. \cr\cr
-#'   \code{clench}: Clench, H. 1979. How to make regional lists of butterflies: 
-#'   Some thoughts. Journal of the Lepidopterists' Society 33(4):216-231
+#'   modified Good-Turing frequency formula. Biometrics 70(3):671-682.}
+#'   \item{\code{clench}}{Clench, H. 1979. How to make regional lists of butterflies: 
+#'   Some thoughts. Journal of the Lepidopterists' Society 33(4):216-231.}
+#' }
 #'   
 #' @examples
 #' data(osa.second.growth)

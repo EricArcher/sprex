@@ -27,6 +27,4 @@ devtools::install_github('ericarcher/sprex')
 * send a pull request: <https://github.com/ericarcher/sprex/>
 * e-mail: <eric.archer@noaa.gov>
 
-## Available functions:
-
 You can see the most recent changes to the package in the NEWS.md file: https://github.com/EricArcher/sprex/blob/master/sprex/NEWS.md
