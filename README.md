@@ -1,3 +1,5 @@
+[![Travis-CI Build Status](https://travis-ci.org/EricArcher/sprex.svg?branch=master)](https://travis-ci.org/EricArcher/sprex)
+
 # sprex
 
 ## Description

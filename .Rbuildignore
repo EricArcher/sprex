@@ -1,10 +1,10 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^devel/*
 ^README\.Rmd$
 ^README-.*\.png$
 ^NEWS\.Rmd$
 ^NEWS\.md$
-^devel*
-^sprex.Rcheck\*
 tar.gz$
 .gitignore
-^.*\.Rproj$
-^\.Rproj\.user$
+^\.travis\.yml$
