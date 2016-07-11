@@ -31,4 +31,9 @@ devtools::install_github('ericarcher/sprex')
 * send a pull request: <https://github.com/ericarcher/sprex/>
 * e-mail: <eric.archer@noaa.gov>
 
-You can see the most recent changes to the package in the NEWS.md file: https://github.com/EricArcher/sprex/blob/master/sprex/NEWS.md
+## Changes in 1.4.2
+
+## Changes in v 1.4.1
+
+* added pct.range to clench function to specify minimum and maximum percentages of sample sizes
+* changed argument m in expected.num.species to accept vectors and return a matrix
