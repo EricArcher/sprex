@@ -34,7 +34,9 @@ devtools::install_github('ericarcher/sprex')
 * send a pull request: <https://github.com/ericarcher/sprex/>
 * e-mail: <eric.archer@noaa.gov>
 
-## version 1.4.1 (current on GitHub)
+## version 1.4.2 (current on GitHub)
+
+## version 1.4.1
 
 * added `pct.range` argument to `clench` function to specify minimum and maximum percentages of sample sizes
 * changed argument `m` in `expected.num.species` function to accept vectors and return a matrix
