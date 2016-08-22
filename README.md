@@ -11,7 +11,7 @@
 
 ## Description
 
-*sprex* is a package for calculating species richness for rarefaction and extrapolation.
+*sprex* is a package for calculating species richness for rarefaction and extrapolation. It contains functions for calculating non-parametric species richness such as jackknife, Chao1, and ACE. Also available are functions for plotting species richness and extrapolation curves.
 
 ## Installation
 

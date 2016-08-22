@@ -1,11 +1,11 @@
 Package: sprex
 Type: Package
-Title: Calculate Species Richness and Extrapolation Metrics
-Description: Calculate species richness functions for rarefaction and
-    extrapolation.
+Title: Species Richness and Extrapolation
+Description: Functions for calculating species richness for rarefaction and extrapolation, primarily non-parametric species richness such as jackknife, Chao1, and ACE. Also available are functions for plotting species richness and extrapolation curves.
 Version: 1.4.2
 Authors@R: c(
   EA = person("Eric", "Archer", email = "eric.archer@noaa.gov", role = c("aut", "cre")))
+URL: https://github.com/EricArcher/sprex
 BugReports: https://github.com/EricArcher/sprex/issues
 Imports:
     graphics,
