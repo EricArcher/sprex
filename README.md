@@ -1,10 +1,12 @@
-![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/sprex?color=red)
-![](http://cranlogs.r-pkg.org/badges/last-day/sprex?color=red)
-![](http://cranlogs.r-pkg.org/badges/last-week/sprex?color=red)
-![](http://cranlogs.r-pkg.org/badges/sprex?color=red)
-![](http://cranlogs.r-pkg.org/badges/grand-total/sprex?color=red)  
+[![CRAN version](http://www.r-pkg.org/badges/version/sprex?color=red)](https://cran.r-project.org/web/packages/sprex/)
+[![CRAN last day downloads](http://cranlogs.r-pkg.org/badges/last-day/sprex?color=red)](https://cran.r-project.org/web/packages/sprex/)
+[![CRAN last week downloads](http://cranlogs.r-pkg.org/badges/last-week/sprex?color=red)](https://cran.r-project.org/web/packages/sprex/)
+[![CRAN last month downloads](http://cranlogs.r-pkg.org/badges/sprex?color=red)](https://cran.r-project.org/web/packages/sprex/)
+[![CRAN total downloads](http://cranlogs.r-pkg.org/badges/grand-total/sprex?color=red)](https://cran.r-project.org/web/packages/sprex/)  
+[![DOI](https://zenodo.org/badge/23926/EricArcher/sprex.svg)](https://zenodo.org/badge/latestdoi/23926/EricArcher/sprex)  
 [![Travis-CI Build Status](https://travis-ci.org/EricArcher/sprex.svg?branch=master)](https://travis-ci.org/EricArcher/sprex)
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/EricArcher/sprex?branch=master&svg=true)](https://ci.appveyor.com/project/EricArcher/sprex)
+
 # sprex
 
 ## Description
