@@ -23,8 +23,8 @@ a vector containing of the estimated additional number of samples
   of species.
 }
 \description{
-Calculate the additional number of samples to required to observe a 
-  given proportion of the total number of species.
+Calculate the additional number of samples (individuals) to 
+  required to observe a given proportion of the total number of species.
 }
 \examples{
 data(osa.old.growth)

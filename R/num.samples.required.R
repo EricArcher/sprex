@@ -1,6 +1,6 @@
 #' @title Number of Samples Required
-#' @description Calculate the additional number of samples to required to observe a 
-#'   given proportion of the total number of species.
+#' @description Calculate the additional number of samples (individuals) to 
+#'   required to observe a given proportion of the total number of species.
 #' 
 #' @param g propotion of total number of species.
 #' @param f a vector of species frequencies where \code{f[i]} is the number of 
