@@ -24,8 +24,9 @@ install.packages('sprex')
 To install the latest version from GitHub:
 
 ```r
-# make sure you have Rtools installed
+# make sure you have devtools installed
 if (!require('devtools')) install.packages('devtools')
+
 # install from GitHub
 devtools::install_github('ericarcher/sprex')
 ```
@@ -37,6 +38,9 @@ devtools::install_github('ericarcher/sprex')
 * e-mail: <eric.archer@noaa.gov>
 
 ## version 1.4.2 (devel)
+
+* removed `plot.discovery.curve()`
+* redesigned `discovery.curve()` to return data frame defining curve and plotting curve if selected.
 
 ## version 1.4.1 (on CRAN)
 
