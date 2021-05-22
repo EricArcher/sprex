@@ -32,9 +32,6 @@ f <- expand.freqs(osa.old.growth)
 num.samples.required(0.6, f = f, f0.func = Chao1)
 
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \references{
 Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotelli. 2009. 
   Sufficient sampling for asymptotic minimum species richness estimators. 
@@ -44,4 +41,6 @@ Eqn 12 in Chao, A., R.K. Colwell, C.-W. Lin, and N.J. Gotelli. 2009.
   linking individual-based and sample-based rarefaction, extrapolation and 
   comparison of assemblages. Journal of Plant Ecology 5(1):3-21.
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

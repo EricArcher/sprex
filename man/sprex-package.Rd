@@ -2,8 +2,8 @@
 % Please edit documentation in R/sprex-package.R
 \docType{package}
 \name{sprex-package}
-\alias{sprex}
 \alias{sprex-package}
+\alias{sprex}
 \title{Calculate species richness and extrapolation metrics}
 \description{
 Calculate species richness and expected number of species 
@@ -17,4 +17,3 @@ Calculate species richness and expected number of species
 sprex
 }
 \keyword{package}
-

@@ -4,8 +4,15 @@
 \alias{discovery.curve}
 \title{Discovery Curve}
 \usage{
-discovery.curve(f, f0.func, max.x = sum(f * 1:length(f)), n.pts = 100,
-  ci = 0.95, ...)
+discovery.curve(
+  f,
+  f0.func,
+  max.x = sum(f * 1:length(f)),
+  n.pts = 100,
+  ci = 0.95,
+  plot = TRUE,
+  ...
+)
 }
 \arguments{
 \item{f}{a vector of species frequencies where \code{f[i]} is the number of 
@@ -20,20 +27,16 @@ Defaults to the sample size of \code{f}.}
 
 \item{ci}{size of the confidence interval (0.5:1).}
 
+\item{plot}{plot the curve?}
+
 \item{...}{other arguments to \code{f0.func}.}
 }
 \value{
 a list with:
 \item{f.stats}{a named vector from \code{f0.func}.}
-\item{s.ind}{a \code{matrix} of S.ind estimates for each value of m along 
-  with the standard deviation of S.ind.}
-\item{s.ind.ci}{a \code{matrix} of the upper and lower confidence intervals 
-  of S.ind.}
-\item{ci.poly}{a \code{matrix} of points describing the ci polygon.}
-\item{rarefact.line}{a \code{matrix} of points defining the rarefaction 
-  line (<= S.obs).}
-\item{extrap.line}{a \code{matrix} of points defining the extrapolation 
-  line (> S.obs).}
+\item{curve}{a \code{data.frame} defining the rarefaction and 
+extrapolation curves (specified in the \code{section} column), and columns 
+providing the lower (\code{lci}) and upper (\code{uci}).}
 }
 \description{
 Calculate the components of a species discovery curve.
@@ -42,11 +45,9 @@ Calculate the components of a species discovery curve.
 data(osa.old.growth)
 f <- expand.freqs(osa.old.growth)
 d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
-plot(d)
 
-}
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
+print(str(d))
+
 }
 \references{
 Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao, 
@@ -54,7 +55,6 @@ Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao,
   individual-based and sample-based rarefaction, extrapolation and 
   comparison of assemblages. Journal of Plant Ecology 5(1):3-21.
 }
-\seealso{
-\code{\link{plot.discovery.curve}}
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
 }
-

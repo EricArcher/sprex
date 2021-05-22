@@ -33,9 +33,6 @@ expected.num.species(60, f = f, f0.func = Chao1)
 
 expected.num.species(c(60, 70, 75), f = f, f0.func = Chao1)
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \references{
 Eqns 4, 5, 9, and 10 in Colwell, R.K., A. Chao, N.J. Gotelli, 
   S.-Y. Lin, C.X. Mao, R.L. Chazdon, and J.T. Longino. 2012. Models and 
@@ -43,4 +40,6 @@ Eqns 4, 5, 9, and 10 in Colwell, R.K., A. Chao, N.J. Gotelli,
   extrapolation and comparison of assemblages. 
   Journal of Plant Ecology 5(1):3-21.
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

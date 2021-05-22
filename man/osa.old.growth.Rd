@@ -22,4 +22,3 @@ Janzen DH (1973) Sweep samples of tropical foliage insects:
   distributions. Ecology 54:659-86.
 }
 \keyword{datasets}
-

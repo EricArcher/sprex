@@ -16,8 +16,7 @@
 #'   R.K. Colwell, and A.M. Ellison. 2014. Rarefaction and extrapolation with
 #'   Hill numbers: a framework for sampling and estimation in species 
 #'   diversity studies. Ecological Monographs 84(1):45-67.
-#'   
-#' @importFrom stats rmultinom   
+#'    
 #' @export
 
 bootstrap.assemblage <- function(f, f0.func, n.boot = 500, ...) {
@@ -46,7 +45,7 @@ bootstrap.assemblage <- function(f, f0.func, n.boot = 500, ...) {
   # generate bootstrap assemblage
   probs <- c(est.prob.i, est.prob.unseen)
   if(any(is.na(probs) | is.nan(probs))) return(NULL)
-  boot.sample <- rmultinom(n.boot, n, probs)
+  boot.sample <- stats::rmultinom(n.boot, n, probs)
   # convert bootstrap assemblage of species frequencies to list of f_i (number of species represented by i individuals)
   lapply(1:ncol(boot.sample), function(i) sample.to.species.freq(boot.sample[, i]))
 }

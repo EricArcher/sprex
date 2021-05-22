@@ -23,13 +23,12 @@ a list of bootstrap replicates of species frequencies.
 \description{
 Create bootstrap assemblage of species.
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \references{
 Chao, A., N.J. Gotelli, T.C. Hsieh, E.L. Sander, K.H. Ma, 
   R.K. Colwell, and A.M. Ellison. 2014. Rarefaction and extrapolation with
   Hill numbers: a framework for sampling and estimation in species 
   diversity studies. Ecological Monographs 84(1):45-67.
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

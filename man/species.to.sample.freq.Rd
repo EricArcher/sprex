@@ -26,10 +26,9 @@ print(f)
 print(x)
 
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \seealso{
 sample.to.species.freq
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

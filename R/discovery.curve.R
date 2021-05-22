@@ -8,19 +8,14 @@
 #' @param n.pts number of points between 0 and \code{max.x} to estimate.
 #' @param ci size of the confidence interval (0.5:1).
 #' @param f0.func function to use to calculate \code{\link{f0}}.
+#' @param plot plot the curve?
 #' @param ... other arguments to \code{f0.func}.
 #' 
 #' @return a list with:
 #' \item{f.stats}{a named vector from \code{f0.func}.}
-#' \item{s.ind}{a \code{matrix} of S.ind estimates for each value of m along 
-#'   with the standard deviation of S.ind.}
-#' \item{s.ind.ci}{a \code{matrix} of the upper and lower confidence intervals 
-#'   of S.ind.}
-#' \item{ci.poly}{a \code{matrix} of points describing the ci polygon.}
-#' \item{rarefact.line}{a \code{matrix} of points defining the rarefaction 
-#'   line (<= S.obs).}
-#' \item{extrap.line}{a \code{matrix} of points defining the extrapolation 
-#'   line (> S.obs).}
+#' \item{curve}{a \code{data.frame} defining the rarefaction and 
+#' extrapolation curves (specified in the \code{section} column), and columns 
+#' providing the lower (\code{lci}) and upper (\code{uci}).}
 #' 
 #' @author Eric Archer \email{eric.archer@@noaa.gov} 
 #' 
@@ -29,19 +24,17 @@
 #'   individual-based and sample-based rarefaction, extrapolation and 
 #'   comparison of assemblages. Journal of Plant Ecology 5(1):3-21.
 #' 
-#' @seealso \code{\link{plot.discovery.curve}}
-#' 
 #' @examples
 #' data(osa.old.growth)
 #' f <- expand.freqs(osa.old.growth)
 #' d <- discovery.curve(f, f0.func = Chao1, max.x = 1200)
-#' plot(d)
 #' 
-#' @importFrom stats qnorm
+#' print(str(d))
+#' 
 #' @export
 #' 
 discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), 
-                            n.pts = 100, ci = 0.95, ...) {
+                            n.pts = 100, ci = 0.95, plot = TRUE, ...) {
   n <- sum(f * 1:length(f))
   n.seq <- ceiling(seq(0, ceiling(max.x), length.out = n.pts))
   n.seq <- sort(unique(c(n, n.seq)))
@@ -50,18 +43,37 @@ discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)),
   s.ind <- s.ind[, -(4:7)]
   s.ind <- s.ind[, c(3, 1, 2)]
   
-  s.ind.ci <- s.ind[, "s.ind"] + qnorm((1 - ci) / 2) * 
+  s.ind.ci <- s.ind[, "s.ind"] + stats::qnorm((1 - ci) / 2) * 
     cbind(s.ind[, "sd.s.ind"], -s.ind[, "sd.s.ind"])
-  ci.poly <- cbind(x = c(n.seq, rev(n.seq)), 
-                   y = c(s.ind.ci[, 1], rev(s.ind.ci[, 2])))
-  ci.poly[, "y"] <- ifelse(ci.poly[, "y"] < 1, 1, ci.poly[, "y"])
-  i <- which(s.ind[, "m"] <= f.stats["n"])
-  rarefact.line <- cbind(x = s.ind[i, "m"], y = s.ind[i, "s.ind"])
-  extrap.line <- cbind(x = s.ind[-i, "m"], y = s.ind[-i, "s.ind"])
   
-  d <- list(f.stats = f.stats, s.ind = s.ind, s.ind.ci = s.ind.ci, 
-            ci.poly = ci.poly, rarefact.line = rarefact.line, 
-            extrap.line = extrap.line)
-  class(d) <- c("discovery.curve", class(d))
-  return(d)
+  i <- max(which(s.ind[, "m"] <= f.stats["n"]))
+  df <- cbind(
+    data.frame(x = n.seq),
+    y = s.ind[, "s.ind"],
+    lci = s.ind.ci[, 1],
+    uci = s.ind.ci[, 2],
+    type = c(
+      rep("rarefaction", i), 
+      rep("extrapolation", length(n.seq) - i)
+    )
+  )
+  
+  if(plot) {
+    g <- ggplot2::ggplot(df, ggplot2::aes_string(x = "x")) +
+      ggplot2::geom_ribbon(
+        ggplot2::aes_string(ymin = "lci", ymax = "uci"), 
+        fill = "salmon", 
+        alpha = 0.7
+      ) +
+      ggplot2::geom_line(ggplot2::aes_string(y = "y", line = "type")) +
+      ggplot2::geom_point(x = f.stats["n"], y = f.stats["s.obs"]) +
+      ggplot2::scale_linetype_manual(
+        values = c(rarefaction = "solid", extrapolation = "dashed")
+      ) +
+      ggplot2::theme(legend.position = "none")
+    
+    print(g)
+  }
+  
+  list(f.stats = f.stats, curve = df)
 }

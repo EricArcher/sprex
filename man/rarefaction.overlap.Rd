@@ -46,9 +46,6 @@ y <- expand.freqs(osa.second.growth)
 rarefaction.overlap(x, y, Chao1)
 
 }
-\author{
-Eric Archer \email{eric.archer@noaa.gov}
-}
 \references{
 Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao, 
   R.L. Chazdon, and J.T. Longino. 2012. Models and estimators linking 
@@ -58,4 +55,6 @@ Colwell, R.K., A. Chao, N.J. Gotelli, S.-Y. Lin, C.X. Mao,
 \seealso{
 \code{\link{discovery.curve}}
 }
-
+\author{
+Eric Archer \email{eric.archer@noaa.gov}
+}

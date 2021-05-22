@@ -29,12 +29,10 @@
 #' f <- expand.freqs(osa.old.growth)
 #' num.samples.required(0.6, f = f, f0.func = Chao1)
 #' 
-#' @importFrom stats optim
-#' @importFrom swfscMisc isBetween
 #' @export
 
 num.samples.required <- function(g, f, f0.func, ...) {
-  if(!isBetween(g, 0, 1)) stop("'g' must be between 0 and 1")
+  if(!swfscMisc::isBetween(g, 0, 1)) stop("'g' must be between 0 and 1")
   x <- f0.func(f, ...)
   s.est <- unname(x["s.est"])
   
@@ -47,7 +45,7 @@ num.samples.required <- function(g, f, f0.func, ...) {
       term.1 * log(term.2)
     } else {
       warning("since f2 == 0, number of samples based on optimizaton of Colwell et al 2012 Eqn. 9")
-      result <- optim(
+      result <- stats::optim(
         par = c(m.star = 1),
         fn = function(m.star, s.g, f0, f1, n, s.obs) {
           s.ind <- .s.ind.n.m(f0, f1, n, m.star, s.obs)

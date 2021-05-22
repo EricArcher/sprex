@@ -40,7 +40,6 @@
 #' y <- expand.freqs(osa.second.growth)
 #' rarefaction.overlap(x, y, Chao1)
 #' 
-#' @importFrom stats dgamma qgamma integrate
 #' @export
 #' 
 rarefaction.overlap <- function(x, y, f0.func, n.rare = NULL, ...) {
@@ -70,13 +69,17 @@ rarefaction.overlap <- function(x, y, f0.func, n.rare = NULL, ...) {
   sc <- (sd.xy ^ 2) / mu.xy
   # integrate minimum PDF
   min.pdf <- function(x, shape, scale) {
-    pmin(dgamma(x, shape = shape[1], scale = scale[1]), 
-         dgamma(x, shape = shape[2], scale = scale[2])
+    pmin(
+      stats::dgamma(x, shape = shape[1], scale = scale[1]), 
+      stats::dgamma(x, shape = shape[2], scale = scale[2])
     )
   }
-  upper <- max(qgamma(0.99999, shape = sh, scale = sc))
+  upper <- max(stats::qgamma(0.99999, shape = sh, scale = sc))
   
-  c(pct.overlap = integrate(min.pdf, 0, upper, shape = sh, scale = sc)$value,
+  c(
+    pct.overlap = stats::integrate(
+      min.pdf, 0, upper, shape = sh, scale = sc
+    )$value,
     result
   )
 }
