@@ -11,7 +11,7 @@
 
 ## Description
 
-*sprex* is a package for calculating species richness for rarefaction and extrapolation. It contains functions for calculating non-parametric species richness such as jackknife, Chao1, and ACE. Also available are functions for plotting species richness and extrapolation curves.
+*sprex* is a package for calculating species richness for rarefaction and extrapolation. It contains functions for calculating non-parametric species richness such as jackknife, Chao1, and ACE. Also available are functions for plotting species richness and extrapolation curves, and standard diversity and entropy indices.
 
 ## Installation
 
@@ -41,6 +41,7 @@ devtools::install_github('ericarcher/sprex')
 
 * removed `plot.discovery.curve()`
 * redesigned `discovery.curve()` to return data frame defining curve and plotting curve if selected.
+* added `diversity()` to compute diversity and entropy indices
 
 ## version 1.4.1 (on CRAN)
 
