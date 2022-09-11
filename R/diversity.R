@@ -89,6 +89,7 @@ diversity <- function(
     } else {
       proportions(table(x))
     }
+    p <- p[p > 0]
     
     switch(
       type,
