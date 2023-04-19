@@ -107,6 +107,7 @@ diversity <- function(
     )
   }
   
+  if(is.data.frame(x)) x <- as.matrix(x)
   if(is.matrix(x)) {
     apply(x, 2, .diversity, type = type, q = q)
   } else if(is.vector(x)) {
