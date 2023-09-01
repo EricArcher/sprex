@@ -35,8 +35,8 @@ Chao1 <- function(f) {
     # here based on the bias corrected f0
     C <- exp(1.96 * sqrt(log(1 + (variance / (s.est.bc - s.obs)^2 ))))
 
-    s.est.bc.upperCI <- s.est.bc + (f0.bc * C)
-    s.est.bc.lowerCI <- s.est.bc + (f0.bc / C)
+    s.est.bc.upperCI <- s.obs + (f0.bc * C)
+    s.est.bc.lowerCI <- s.obs + (f0.bc / C)
   } else {
     # these are undefined if either f[1] or f[2] are 0
     variance <- NA
