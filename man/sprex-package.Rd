@@ -16,4 +16,16 @@ Calculate species richness and expected number of species
 \details{
 sprex
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/EricArcher/sprex}
+  \item Report bugs at \url{https://github.com/EricArcher/sprex/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Eric Archer \email{eric.archer@noaa.gov}
+
+}
 \keyword{package}

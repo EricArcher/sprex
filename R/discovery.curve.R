@@ -40,13 +40,14 @@ discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)),
   n.seq <- sort(unique(c(n, n.seq)))
   s.ind <- t(sapply(n.seq, expected.num.species, f = f, f0.func = f0.func, ...))
   f.stats <- s.ind[1, 4:7]
+  n <- s.ind[, 'n']
   s.ind <- s.ind[, -(4:7)]
   s.ind <- s.ind[, c(3, 1, 2)]
   
   s.ind.ci <- s.ind[, "s.ind"] + stats::qnorm((1 - ci) / 2) * 
     cbind(s.ind[, "sd.s.ind"], -s.ind[, "sd.s.ind"])
   
-  i <- max(which(s.ind[, "m"] <= f.stats["n"]))
+  i <- max(which(s.ind[, "m"] <= n))
   df <- cbind(
     data.frame(x = n.seq),
     y = s.ind[, "s.ind"],
