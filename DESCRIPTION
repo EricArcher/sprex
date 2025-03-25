@@ -12,11 +12,11 @@ Authors@R: c(
 URL: https://github.com/EricArcher/sprex
 BugReports: https://github.com/EricArcher/sprex/issues
 Depends:
-    R (>= 4.0.0)
+    R (>= 4.1.0)
 Imports:
     ggplot2,
     stats,
     swfscMisc (>= 1.4)
 License: GNU General Public License
 Encoding: UTF-8
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2

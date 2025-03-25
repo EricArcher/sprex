@@ -1,6 +1,6 @@
 #' sprex
 #' 
-#' @docType package
+#' "_PACKAGE"
 #' @name sprex-package
 #' @aliases sprex
 #' @title Calculate species richness and extrapolation metrics
@@ -10,7 +10,6 @@
 #'   estimators linking individual-based and sample-based rarefaction, 
 #'   extrapolation and comparison of assemblages. 
 #'   Journal of Plant Ecology 5(1):3-21.
-#' @keywords package
 NULL
 
 #' @docType data

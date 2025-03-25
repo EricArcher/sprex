@@ -35,9 +35,9 @@
 #' 
 discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)), 
                             n.pts = 100, ci = 0.95, plot = TRUE, ...) {
-  n <- sum(f * 1:length(f))
+  n.total <- sum(f * 1:length(f))
   n.seq <- ceiling(seq(0, ceiling(max.x), length.out = n.pts))
-  n.seq <- sort(unique(c(n, n.seq)))
+  n.seq <- sort(unique(c(n.total, n.seq)))
   s.ind <- t(sapply(n.seq, expected.num.species, f = f, f0.func = f0.func, ...))
   f.stats <- s.ind[1, 4:7]
   n <- s.ind[, 'n']
@@ -66,8 +66,12 @@ discovery.curve <- function(f, f0.func, max.x = sum(f * 1:length(f)),
         fill = "salmon", 
         alpha = 0.7
       ) +
-      ggplot2::geom_line(ggplot2::aes_string(y = "y", line = "type")) +
-      ggplot2::geom_point(x = f.stats["n"], y = f.stats["s.obs"]) +
+      ggplot2::geom_line(ggplot2::aes_string(y = "y", linetype = "type")) +
+      ggplot2::annotate(
+        geom = 'point',
+        x = n.total, 
+        y = sum(f)
+      ) +
       ggplot2::scale_linetype_manual(
         values = c(rarefaction = "solid", extrapolation = "dashed")
       ) +

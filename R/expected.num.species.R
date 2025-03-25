@@ -30,7 +30,7 @@
 #' expected.num.species(c(60, 70, 75), f = f, f0.func = Chao1)
 NULL
 
-#' @export
+#' @keywords internal
 #' 
 .s.ind.n.m <- function(f0, f1, n, m.star, s.obs) {
   if(f0 == 0) return(s.obs)
