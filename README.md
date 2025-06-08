@@ -36,6 +36,10 @@ devtools::install_github('ericarcher/sprex')
 * send a pull request: <https://github.com/ericarcher/sprex/>
 * e-mail: <eric.archer@noaa.gov>
 
+## version 1.4.3 (on CRAN)
+
+* move to SWFSC/sprex as main GitHub repository
+
 ## version 1.4.2 (on CRAN)
 
 * removed `plot.discovery.curve()`
