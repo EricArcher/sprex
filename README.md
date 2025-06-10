@@ -40,7 +40,7 @@ devtools::install_github('ericarcher/sprex')
 
 * move to SWFSC/sprex as main GitHub repository
 
-## version 1.4.2 (on CRAN)
+## version 1.4.2
 
 * removed `plot.discovery.curve()`
 * redesigned `discovery.curve()` to return data frame defining curve and plotting curve if selected.
